@@ -1,3 +1,6 @@
 crcdjango
 .vscode
 crc_cicd/db.sqlite3
+crc_cicd/frontend/static
+crc_cicd/frontend/node_modules
+crc_cicd/frontend/package-lock.json
