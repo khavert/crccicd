@@ -1,0 +1,43 @@
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    overflow-x: hidden;
+    color: #202124;
+    background-color: #fff;
+}
+
+
+div{
+    margin: 0;
+    padding: 0;
+    border: none;
+    align-items: center;
+    display: block;
+}
+
+.container{
+    margin: 30px auto;
+    padding: 15px;
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+h1{
+    font-size: 1.6rem;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid #ccc;
+}
+h2{
+    font-size: 1.2rem;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.index{
+    text-align: right;
+}
