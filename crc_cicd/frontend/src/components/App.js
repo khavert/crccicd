@@ -45,7 +45,7 @@ class App extends Component {
         return (
             <div>
                 <div>Current version: {packageVersion.version}</div>
-                <div><button onClick={this.onShowFormClick}>Add record</button></div>
+                {!this.state.form && <div><button onClick={this.onShowFormClick}>Add record</button></div>}
                 {this.state.form && <Form/>}
                 {this.state.data.map(message => {
                     return (
