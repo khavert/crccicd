@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import './App.css'
-
+import packageVersion from '../../package.json'
+import Form from './Form'
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
             data: [],
             loaded: false,
-            placeholder: "Loading"
+            placeholder: "Loading",
+            form: false
         };
     }
 
@@ -31,19 +33,28 @@ class App extends Component {
                 });
             });
     }
-
+    onShowFormClick = () => {
+        this.setState({form: !this.state.form,
+            data: this.state.data,
+            loaded: this.state.loaded,
+            placeholder: "Loading",
+        })
+        console.log(this.state)
+    }
     render() {
         return (
             <div>
+                <div>Current version: {packageVersion.version}</div>
+                <div><button onClick={this.onShowFormClick}>Add record</button></div>
+                {this.state.form && <Form/>}
                 {this.state.data.map(message => {
                     return (
-                        <div className="container">
+                        <div className="container" key={message.id}>
                             <p className="index">{message.id}</p>
                             <h1>Title: {message.title}</h1>
                             <h2>Name: {message.name}</h2>
                             <p>{message.message}</p>
                         </div>
-
                     );
                 })}
             </div>
