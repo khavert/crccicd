@@ -3,7 +3,7 @@
 import json
 import sys
 
-if len(sys.argv) < 3:
+if len(sys.argv) < 2:
     raise SystemExit('Missing parameters')
 
 build_number = sys.argv[1]
